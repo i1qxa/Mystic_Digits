@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.level.LevelFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"
+        />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        android:src="@drawable/back"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_levels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        app:layout_constraintBottom_toTopOf="@id/h30"
+        />
+
+    <include
+        android:id="@+id/lvl1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toStartOf="@id/v15"
+        app:layout_constraintEnd_toStartOf="@id/lvl2"
+        app:layout_constraintTop_toTopOf="@id/h30"
+        app:layout_constraintBottom_toTopOf="@id/lvl4"
+        />
+
+    <include
+        android:id="@+id/lvl2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toEndOf="@id/lvl1"
+        app:layout_constraintEnd_toStartOf="@id/lvl3"
+        app:layout_constraintTop_toTopOf="@id/h30"
+        app:layout_constraintBottom_toTopOf="@id/lvl4"
+        />
+
+    <include
+        android:id="@+id/lvl3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        layout="@layout/lvl_item"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/lvl2"
+        app:layout_constraintEnd_toEndOf="@id/v85"
+        app:layout_constraintTop_toTopOf="@id/h30"
+        app:layout_constraintBottom_toTopOf="@id/lvl4"
+        />
+    <include
+        android:id="@+id/lvl4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toStartOf="@id/v15"
+        app:layout_constraintEnd_toStartOf="@id/lvl5"
+        app:layout_constraintTop_toBottomOf="@id/lvl1"
+        app:layout_constraintBottom_toTopOf="@id/lvl7"
+        />
+
+    <include
+        android:id="@+id/lvl5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toEndOf="@id/lvl4"
+        app:layout_constraintEnd_toStartOf="@id/lvl6"
+        app:layout_constraintTop_toBottomOf="@id/lvl1"
+        app:layout_constraintBottom_toTopOf="@id/lvl7"
+        />
+
+    <include
+        android:id="@+id/lvl6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        layout="@layout/lvl_item"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/lvl5"
+        app:layout_constraintEnd_toEndOf="@id/v85"
+        app:layout_constraintTop_toBottomOf="@id/lvl1"
+        app:layout_constraintBottom_toTopOf="@id/lvl7"
+        />
+    <include
+        android:id="@+id/lvl7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toStartOf="@id/v15"
+        app:layout_constraintEnd_toStartOf="@id/lvl8"
+        app:layout_constraintTop_toBottomOf="@id/lvl4"
+        app:layout_constraintBottom_toTopOf="@id/lvl10"
+        />
+
+    <include
+        android:id="@+id/lvl8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toEndOf="@id/lvl7"
+        app:layout_constraintEnd_toStartOf="@id/lvl9"
+        app:layout_constraintTop_toBottomOf="@id/lvl4"
+        app:layout_constraintBottom_toTopOf="@id/lvl10"
+        />
+
+    <include
+        android:id="@+id/lvl9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        layout="@layout/lvl_item"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/lvl8"
+        app:layout_constraintEnd_toEndOf="@id/v85"
+        app:layout_constraintTop_toBottomOf="@id/lvl4"
+        app:layout_constraintBottom_toTopOf="@id/lvl10"
+
+        />
+
+    <include
+        android:id="@+id/lvl10"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toStartOf="@id/v15"
+        app:layout_constraintEnd_toStartOf="@id/lvl11"
+        app:layout_constraintTop_toBottomOf="@id/lvl7"
+        app:layout_constraintBottom_toTopOf="@id/lvl13"
+        />
+
+    <include
+        android:id="@+id/lvl11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toEndOf="@id/lvl10"
+        app:layout_constraintEnd_toStartOf="@id/lvl12"
+        app:layout_constraintTop_toBottomOf="@id/lvl7"
+        app:layout_constraintBottom_toTopOf="@id/lvl13"
+        />
+
+    <include
+        android:id="@+id/lvl12"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        layout="@layout/lvl_item"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/lvl11"
+        app:layout_constraintEnd_toEndOf="@id/v85"
+        app:layout_constraintTop_toBottomOf="@id/lvl7"
+        app:layout_constraintBottom_toTopOf="@id/lvl13"
+        />
+
+    <include
+        android:id="@+id/lvl13"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toStartOf="@id/v15"
+        app:layout_constraintEnd_toStartOf="@id/lvl14"
+        app:layout_constraintTop_toBottomOf="@id/lvl10"
+        app:layout_constraintBottom_toBottomOf="@id/h85"
+        />
+
+    <include
+        android:id="@+id/lvl14"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        layout="@layout/lvl_item"
+        app:layout_constraintStart_toEndOf="@id/lvl13"
+        app:layout_constraintEnd_toStartOf="@id/lvl15"
+        app:layout_constraintTop_toBottomOf="@id/lvl10"
+        app:layout_constraintBottom_toBottomOf="@id/h85"
+        />
+
+    <include
+        android:id="@+id/lvl15"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        layout="@layout/lvl_item"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toEndOf="@id/lvl14"
+        app:layout_constraintEnd_toEndOf="@id/v85"
+        app:layout_constraintTop_toBottomOf="@id/lvl10"
+        app:layout_constraintBottom_toBottomOf="@id/h85"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

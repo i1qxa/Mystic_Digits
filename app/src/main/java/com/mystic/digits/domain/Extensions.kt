@@ -6,6 +6,7 @@ import com.mystic.digits.R
 
 const val prefsName = "mystic_digits_prefs"
 const val soundPrefs = "sound"
+const val lvlPrefs = "lvl"
 
 fun FragmentManager.launchWith(fragment:Fragment){
     this.beginTransaction().apply {

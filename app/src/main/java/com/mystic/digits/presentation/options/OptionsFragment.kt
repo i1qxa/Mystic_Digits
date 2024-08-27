@@ -76,7 +76,7 @@ class OptionsFragment : Fragment() {
     }
 
     private fun getTextColor(isActive: Boolean): Int {
-        return if (isSound) requireContext().getColor(R.color.option_active) else requireContext().getColor(
+        return if (isActive) requireContext().getColor(R.color.option_active) else requireContext().getColor(
             R.color.option_in_active
         )
     }

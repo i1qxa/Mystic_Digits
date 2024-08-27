@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.mystic_game.MysticGameFragment">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        android:src="@drawable/back"
+        />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        android:src="@drawable/settings_btn"
+        />
+
+    <ImageView
+        android:id="@+id/appName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="461:100"
+        app:layout_constraintStart_toEndOf="@id/back"
+        app:layout_constraintEnd_toStartOf="@id/settings"
+        android:src="@drawable/mystic_digits"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/back"
+        />
+
+    <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        tools:text="LEVEL 1"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aclonica_regular"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#EDC702"
+        />
+
+    <TextView
+        android:id="@+id/tvLeve2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        tools:text="LEVEL 1"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aclonica_regular"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#EDC702"
+        />
+
+    <TextView
+        android:id="@+id/tvLeve3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        tools:text="LEVEL 1"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aclonica_regular"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#EDC702"
+        />
+
+    <TextView
+        android:id="@+id/tvLeve4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        tools:text="LEVEL 1"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/aclonica_regular"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#EDC702"
+        />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/audiowide"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:text="00:00"
+        android:background="@drawable/timer_bckgr"
+        android:gravity="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

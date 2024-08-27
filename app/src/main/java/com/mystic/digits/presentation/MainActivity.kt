@@ -2,13 +2,17 @@ package com.mystic.digits.presentation
 
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.View
+import android.view.View.OnClickListener
 import android.view.WindowManager
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.mystic.digits.R
 import com.mystic.digits.domain.launchWith
+import com.mystic.digits.presentation.exit.ExitFragment
 import com.mystic.digits.presentation.launch_game.LaunchFragment
 
 class MainActivity : AppCompatActivity() {
@@ -21,19 +25,21 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
-        window.decorView.setOnKeyListener { _, keyCode, _ ->
-            if (keyCode == KeyEvent.KEYCODE_BACK) {
-                when(supportFragmentManager.findFragmentById(R.id.conteinerMystic)){
-                    is LaunchFragment -> {
-                        supportFragmentManager.launchWith(FinishFragment())
-                    }
+        val callback = object : OnBackPressedCallback(
+            true
+        ) {
+            override fun handleOnBackPressed() {
+                if (supportFragmentManager.findFragmentById(R.id.conteinerMystic) is LaunchFragment) {
+                    supportFragmentManager.launchWith(ExitFragment())
+                }else {
+                    supportFragmentManager.popBackStack()
                 }
-                return@setOnKeyListener true
             }
-            false
         }
+        this.onBackPressedDispatcher.addCallback(
+            this,
+            callback
+        )
     }
-
 
 }
