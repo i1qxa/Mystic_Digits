@@ -11,6 +11,7 @@ import com.mystic.digits.databinding.FragmentLaunchBinding
 import com.mystic.digits.domain.launchWith
 import com.mystic.digits.presentation.exit.ExitFragment
 import com.mystic.digits.presentation.level.LevelFragment
+import com.mystic.digits.presentation.mystic_game.MysticGameFragment
 import com.mystic.digits.presentation.options.OptionsFragment
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -42,6 +43,9 @@ class LaunchFragment : Fragment() {
         }
         binding.levels.setOnClickListener {
             parentFragmentManager.launchWith(LevelFragment())
+        }
+        binding.play.setOnClickListener {
+            parentFragmentManager.launchWith(MysticGameFragment())
         }
     }
 

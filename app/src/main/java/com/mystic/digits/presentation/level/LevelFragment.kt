@@ -34,6 +34,9 @@ class LevelFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupLvlDigits()
         setupStars()
+        binding.back.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
     }
 
     private fun setupLvlDigits() {

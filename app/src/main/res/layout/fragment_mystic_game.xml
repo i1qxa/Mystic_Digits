@@ -6,6 +6,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.mystic_game.MysticGameFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
     <ImageView
         android:id="@+id/back"
         android:layout_width="wrap_content"
@@ -97,6 +113,208 @@
         android:textSize="35sp"
         android:textColor="#EDC702"
         />
+
+    <ImageView
+        android:id="@+id/gameField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toEndOf="@id/v90"
+        app:layout_constraintTop_toBottomOf="@id/tvLevel"
+        app:layout_constraintBottom_toTopOf="@id/tvTimer"
+        />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d1"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toStartOf="@id/d2"
+        app:layout_constraintTop_toTopOf="@id/gameField"
+        app:layout_constraintBottom_toTopOf="@id/d5"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="1"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d2"
+        app:layout_constraintStart_toEndOf="@id/d1"
+        app:layout_constraintEnd_toStartOf="@id/d3"
+        app:layout_constraintTop_toTopOf="@id/gameField"
+        app:layout_constraintBottom_toTopOf="@id/d6"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="2"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d3"
+        app:layout_constraintStart_toEndOf="@id/d2"
+        app:layout_constraintEnd_toStartOf="@id/d4"
+        app:layout_constraintTop_toTopOf="@id/gameField"
+        app:layout_constraintBottom_toTopOf="@id/d7"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="3"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d4"
+        app:layout_constraintStart_toEndOf="@id/d3"
+        app:layout_constraintEnd_toStartOf="@id/v90"
+        app:layout_constraintTop_toTopOf="@id/gameField"
+        app:layout_constraintBottom_toTopOf="@id/d8"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="4"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d5"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toStartOf="@id/d6"
+        app:layout_constraintTop_toBottomOf="@id/d1"
+        app:layout_constraintBottom_toTopOf="@id/d9"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="5"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d6"
+        app:layout_constraintStart_toEndOf="@id/d5"
+        app:layout_constraintEnd_toStartOf="@id/d7"
+        app:layout_constraintTop_toBottomOf="@id/d2"
+        app:layout_constraintBottom_toTopOf="@id/d10"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="6"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d7"
+        app:layout_constraintStart_toEndOf="@id/d6"
+        app:layout_constraintEnd_toStartOf="@id/d8"
+        app:layout_constraintTop_toBottomOf="@id/d3"
+        app:layout_constraintBottom_toTopOf="@id/d11"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="7"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d8"
+        app:layout_constraintStart_toEndOf="@id/d7"
+        app:layout_constraintEnd_toStartOf="@id/v90"
+        app:layout_constraintTop_toBottomOf="@id/d4"
+        app:layout_constraintBottom_toTopOf="@id/d12"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="8"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d9"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toStartOf="@id/d10"
+        app:layout_constraintTop_toBottomOf="@id/d5"
+        app:layout_constraintBottom_toTopOf="@id/d13"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="9"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d10"
+        app:layout_constraintStart_toEndOf="@id/d9"
+        app:layout_constraintEnd_toStartOf="@id/d11"
+        app:layout_constraintTop_toBottomOf="@id/d6"
+        app:layout_constraintBottom_toTopOf="@id/d14"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="10"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d11"
+        app:layout_constraintStart_toEndOf="@id/d10"
+        app:layout_constraintEnd_toStartOf="@id/d12"
+        app:layout_constraintTop_toBottomOf="@id/d7"
+        app:layout_constraintBottom_toTopOf="@id/d15"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="11"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d12"
+        app:layout_constraintStart_toEndOf="@id/d11"
+        app:layout_constraintEnd_toStartOf="@id/v90"
+        app:layout_constraintTop_toBottomOf="@id/d8"
+        app:layout_constraintBottom_toTopOf="@id/d16"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="12"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d13"
+        app:layout_constraintStart_toStartOf="@id/v10"
+        app:layout_constraintEnd_toStartOf="@id/d14"
+        app:layout_constraintTop_toBottomOf="@id/d9"
+        app:layout_constraintBottom_toBottomOf="@id/gameField"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="13"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d14"
+        app:layout_constraintStart_toEndOf="@id/d13"
+        app:layout_constraintEnd_toStartOf="@id/d15"
+        app:layout_constraintTop_toBottomOf="@id/d10"
+        app:layout_constraintBottom_toBottomOf="@id/gameField"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="14"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d15"
+        app:layout_constraintStart_toEndOf="@id/d14"
+        app:layout_constraintEnd_toStartOf="@id/d16"
+        app:layout_constraintTop_toBottomOf="@id/d11"
+        app:layout_constraintBottom_toBottomOf="@id/gameField"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        app:outlineColor="#C2532B"
+        tools:text="15"
+        style="@style/game_item_style" />
+
+    <com.mystic.digits.domain.OutlineTextView
+        android:id="@+id/d16"
+        app:layout_constraintStart_toEndOf="@id/d15"
+        app:layout_constraintEnd_toStartOf="@id/v90"
+        app:layout_constraintTop_toBottomOf="@id/d12"
+        app:layout_constraintBottom_toBottomOf="@id/gameField"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:outlineColor="#C2532B"
+        style="@style/game_item_style" />
 
     <TextView
         android:id="@+id/tvTimer"

@@ -13,9 +13,11 @@ import androidx.lifecycle.lifecycleScope
 import com.mystic.digits.R
 import com.mystic.digits.databinding.FragmentOptionsBinding
 import com.mystic.digits.domain.dataStore
+import com.mystic.digits.domain.launchWithOut
 import com.mystic.digits.domain.musicKey
 import com.mystic.digits.domain.prefsName
 import com.mystic.digits.domain.soundPrefs
+import com.mystic.digits.presentation.launch_game.LaunchFragment
 import kotlinx.coroutines.launch
 
 class OptionsFragment : Fragment() {
@@ -46,7 +48,7 @@ class OptionsFragment : Fragment() {
 
     private fun setupBtnClickListeners() {
         binding.back.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            parentFragmentManager.launchWithOut(LaunchFragment())
         }
         binding.soundLogo.setOnClickListener {
             isSound = !isSound

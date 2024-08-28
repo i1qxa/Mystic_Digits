@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="game_item_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textColor">#FBEB66</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/aclonica_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/gi_bckgr</item>
+        <item name="layout_constraintDimensionRatio">1:1</item>
+    </style>
+</resources>
