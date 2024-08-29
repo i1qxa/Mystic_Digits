@@ -1,5 +1,6 @@
 package com.mystic.digits.presentation.mystic_game
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,7 +10,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runInterruptible
 
 class MysticViewModel : ViewModel() {
 
@@ -45,7 +45,6 @@ class MysticViewModel : ViewModel() {
                 delay(1000)
                 val currentTime = (timer.value?:0) + 1
                 timer.postValue(currentTime.toShort())
-                if (currentTime>3) finishGame.postValue(Unit)
             }
 
         }
@@ -72,9 +71,15 @@ class MysticViewModel : ViewModel() {
 
     private fun checkRes(){
         var res = true
-        listOfMysticDigits.map {
-            if (!it.checkPosition()) res = false
+        var index = 0
+        while (index<(listOfMysticDigits.size - 1)){
+            Log.d("INDEX", "index: $index")
+            if (!listOfMysticDigits[index].checkPosition()) res = false
+            index++
         }
+//        listOfMysticDigits.map {
+//            if (!it.checkPosition()) res = false
+//        }
         if (res){
             stopTimer()
             finishGame.postValue(Unit)
